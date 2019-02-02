@@ -1,0 +1,29 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+  ~/.dotfiles: ''
+
+### VIM
+  ~/.vim: vim
+  ~/.vimrc: vimrc
+
+### TMUX
+  ~/.tmux/plugins/tpm:
+      path: tpm/
+      create: true
+  ~/.tmux.conf: tmux.conf
+
+### ZPRESTO
+  ~/.zshenv: zshenv
+  ~/.zprofile: zprofile
+  ~/.zshrc: zshrc
+  ~/.zpreztorc: zpreztorc
+  ~/.zprezto: prezto/
+  ~/.dotfiles/prezto/contrib: prezto-contrib/
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]

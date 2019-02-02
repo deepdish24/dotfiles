@@ -1,0 +1,18 @@
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+[submodule "prezto"]
+	path = prezto
+	url = https://github.com/sorin-ionescu/prezto.git
+[submodule "prezto-contrib"]
+	path = prezto-contrib
+	url = https://github.com/belak/prezto-contrib.git
+[submodule "tpm"]
+	path = tpm
+	url = https://github.com/tmux-plugins/tpm.git
+[submodule "vim/vim-plug"]
+	path = vim/vim-plug
+	url = https://github.com/junegunn/vim-plug.git
+[submodule "bendotfiles/dotfiles"]
+	path = bendotfiles/dotfiles
+	url = https://bitbucket.org/icantjuddle/dotfiles.git
