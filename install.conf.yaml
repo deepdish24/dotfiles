@@ -4,12 +4,17 @@
 
 - clean: ['~']
 
-- link:
-  ~/.dotfiles: ''
 
+- shell: 
+  - [git submodule update --init --recursive, Installing submodules]
+
+
+- link:
 ### VIM
-  ~/.vim: vim
-  ~/.vimrc: vimrc
+  ~/.vim/autoload/plug.vim:
+      path: vim/vim-plug/plug.vim
+      create: true
+  ~/.vimrc: vim/vimrc
 
 ### TMUX
   ~/.tmux/plugins/tpm:
@@ -24,6 +29,3 @@
   ~/.zpreztorc: zpreztorc
   ~/.zprezto: prezto/
   ~/.dotfiles/prezto/contrib: prezto-contrib/
-
-- shell:
-    - [git submodule update --init --recursive, Installing submodules]
