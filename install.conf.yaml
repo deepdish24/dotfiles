@@ -4,11 +4,6 @@
 
 - clean: ['~']
 
-
-- shell: 
-  - [git submodule update --init --recursive, Installing submodules]
-
-
 - link:
 ### VIM
   ~/.vim/autoload/plug.vim:
@@ -29,3 +24,6 @@
   ~/.zpreztorc: zpreztorc
   ~/.zprezto: prezto/
   ~/.dotfiles/prezto/contrib: prezto-contrib/
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
