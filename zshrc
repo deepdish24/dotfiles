@@ -1,9 +1,6 @@
 #
 # Executes commands at the start of an interactive session.
 #
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -12,29 +9,42 @@ fi
 
 plugins=(git zsh-syntax-highlighting)
 
+# PATH stuff here...
+#
 
- export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/Users/deepansaravanan/.nvm/versions/node/v5.0.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/GAMS24.8/GAMS Terminal.app/../sysdir:/usr/local/bin/emacs-26.1"
+# Git Aliases
+alias gb='git branch'
+alias gc='git checkout'
+alias gf='git fetch --all --prune'
+alias gr='git rebase'
+alias gs='git status'
+alias gl='git log'
+alias gfiles='git show --pretty="" --name-only'
+alias ggrep='git grep' $1
+alias gdiff='git diff HEAD~ HEAD'
+alias gdiffstat='git diff --stat HEAD~'
+alias gdel='git branch -D'
 
-# Customize to your needs...
-# export WORKON_HOME=$HOME/.virtualenvs
-# export PROJECT_HOME=$HOME/Devel 
-source /usr/local/bin/virtualenvwrapper.sh
-export DEFAULT_USER=deepansaravanan@Deepans-MacBook-Pro
+# Tmux Aliases
+alias tmuxa='tmux attach'
+alias tmuxls='tmux list-sessions'
+alias tmuxks='tmux kill-session -t'
+
+# General Aliases
+alias findfile='find . -name '
+alias clearshots='rm -rf ~/Desktop/Screen\ *'
 
 
-scpfunction() {
-    scp $1 deepans@eniac.seas.upenn.edu:
+# Commands to run on startup
+set -o emacs
+
+# Terminal Colors
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
+export AWS_CONFIG_FILE="$HOME/figma/figma/config/aws/sso_config"
+
+function cdg {
+  cd "$(git rev-parse --show-toplevel)/${1}"
 }
-
-alias eniacscp=scpfunction
-
-alias sublime='open -a "Sublime Text"' $1
-
-alias pycharm='/usr/local/bin/charm' $1
-
-alias intellij='/usr/local/bin/idea' $1
-
-SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_PROMPT_SEPARATE_LINE=false
-SPACESHIP_PROMPT_ORDER=(user host dir git node pyenv exec_time line_sep jobs exit_code char)
-
+export PKG_CONFIG_PATH="/opt/homebrew/opt/zlib/lib/pkgconfig:/usr/local/opt/zlib/lib/pkgconfig:$PKG_CONFIG_PATH"
