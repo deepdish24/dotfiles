@@ -37,6 +37,8 @@ alias clearshots='rm -rf ~/Desktop/Screen\ *'
 
 # Commands to run on startup
 set -o emacs
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
 
 # Terminal Colors
 export CLICOLOR=1
