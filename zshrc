@@ -44,8 +44,6 @@ bindkey "^[[1;3D" backward-word
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
-export AWS_CONFIG_FILE="$HOME/figma/figma/config/aws/sso_config"
-
 function cdg {
   cd "$(git rev-parse --show-toplevel)/${1}"
 }
