@@ -6,16 +6,16 @@
 
 - link:
 ### VIM
-    ~/.vim/autoload/plug.vim:
-        path: vim/vim-plug/plug.vim
-        create: true
-    ~/.vimrc: vim/vimrc
+#    ~/.vim/autoload/plug.vim:
+#        path: vim/vim-plug/plug.vim
+#        create: true
+#    ~/.vimrc: vim/vimrc
 
 ### TMUX
-    ~/.tmux/plugins/tpm:
-        path: tpm/
-        create: true
-    ~/.tmux.conf: tmux.conf
+#    ~/.tmux/plugins/tpm:
+#        path: tpm/
+#        create: true
+#    ~/.tmux.conf: tmux.conf
 
 ### ZPRESTO
     ~/.zshenv: zshenv
