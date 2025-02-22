@@ -38,9 +38,9 @@ zstyle ':prezto:load' pmodule \
   'syntax-highlighting' \
   'history-substring-search' \
   'autosuggestions' \
-  'contrib-prompt' \
-  'prompt' \
-  'alias-tips' \
+#  'contrib-prompt' \
+#  'prompt' \
+#  'alias-tips' \
   # 'enhancd' \
   # 'tmux' \
   # 'python' \
