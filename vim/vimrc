@@ -6,6 +6,7 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set expandtab
+set hidden
 
 "Respect line wrapping
 nnoremap k gk
@@ -95,6 +96,13 @@ noremap <C-I> :Autoformat<CR>
 "nnoremap <C-K> <C-W><C-K>
 "nnoremap <C-L> :tabl<CR>
 "nnoremap <C-H> <C-W><C-H>
+"
+"Buffer Switching
+nnoremap ]b :bnext<CR>
+nnoremap [b :bprevious<CR>
+
+"Buffer Close
+nnoremap <leader>q :bp\|bd #<CR>
 
 "Ctrl-p
 let g:ctrlp_map = '<c-p>'
