@@ -17,12 +17,16 @@ Install the following before running the install script:
 - **[Neovim](https://neovim.io/) >= 0.11.2** (required by LazyVim)
 - **[tmux](https://github.com/tmux/tmux)**
 - **curl**
+- **[Nerd Font](https://www.nerdfonts.com/)** (required for LazyVim icons)
 
 On macOS with [Homebrew](https://brew.sh/):
 
 ```bash
 brew install zsh neovim tmux curl
+brew install --cask font-meslo-lg-nerd-font
 ```
+
+After installing the font, set your terminal emulator to use it (e.g. iTerm2: Preferences → Profiles → Text → Font → **MesloLGS Nerd Font**).
 
 On Ubuntu/Debian:
 
