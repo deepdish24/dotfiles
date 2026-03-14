@@ -7,11 +7,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-plugins=(git zsh-syntax-highlighting)
-
-# PATH stuff here...
-#
-
 # Git Aliases
 alias gb='git branch'
 alias gc='git checkout'
@@ -34,7 +29,6 @@ alias tmuxks='tmux kill-session -t'
 alias findfile='find . -name '
 alias clearshots='rm -rf ~/Desktop/Screen\ *'
 
-
 # Commands to run on startup
 set -o emacs
 bindkey "^[[1;3C" forward-word
@@ -47,4 +41,3 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 function cdg {
   cd "$(git rev-parse --show-toplevel)/${1}"
 }
-export PKG_CONFIG_PATH="/opt/homebrew/opt/zlib/lib/pkgconfig:/usr/local/opt/zlib/lib/pkgconfig:$PKG_CONFIG_PATH"

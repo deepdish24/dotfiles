@@ -38,7 +38,6 @@ zstyle ':prezto:load' pmodule \
   'syntax-highlighting' \
   'history-substring-search' \
   'autosuggestions' \
-  'contrib-prompt' \
   'prompt' \
 #  'alias-tips' \
   # 'enhancd' \
@@ -190,8 +189,8 @@ zstyle ':prezto:module:python:virtualenv' initialize 'yes'
    'main' \
    'brackets' \
    'pattern' \
-   'line' \
-   'cursor' \
+   # 'line' \
+   # 'cursor' \
    'root'
 #
 # Set syntax highlighting styles.
